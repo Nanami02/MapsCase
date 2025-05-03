@@ -1,0 +1,8 @@
+{
+    "manifest": [
+        {
+            "key": "assets/content/items/barter/wallet/wallet.bundle",
+            "dependencyKeys": []
+        }
+    ]
+}

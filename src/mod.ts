@@ -5,12 +5,13 @@ import { CustomItemService } from "@spt/services/mod/CustomItemService";
 import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { IPostSptLoadMod } from "@spt/models/external/IPostSptLoadMod";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { ItemTpl } from "@spt/models/enums/ItemTpl";
 
 const secureContainers = {
     "kappa": "5c093ca986f7740a1867ab12",
-    "kappa_cult": "676008db84e242067d0dc4c9",
+    "kappaCult": "676008db84e242067d0dc4c9",
     "gamma": "5857a8bc2459772bad15db29",
-    "gamma_tue":"665ee77ccf2d642e98220bca",
+    "gammaUnheard":"665ee77ccf2d642e98220bca",
     "epsilon": "59db794186f77448bc595262",
     "beta": "5857a8b324597729ab0a0e7d",
     "alpha": "544a11ac4bdc2d470e8b456a",
@@ -30,13 +31,13 @@ class Mod implements IPostDBLoadMod, IPostSptLoadMod
 
 
         const mapsCase: NewItemFromCloneDetails = {
-            itemTplToClone: "5783c43d2459774bbe137486",
+            itemTplToClone: ItemTpl.CONTAINER_SIMPLE_WALLET,
             overrideProperties: {
                 Name: "Maps case",
                 ShortName: "Maps",
                 Description: "Wallet for maps.",
                 Prefab: {
-                    "path": "assets/content/items/barter/wallet/wallet.bundle",
+                    "path": "assets/content/items/barter/wallet/item_wallet.bundle",
                     "rcid": ""
                 },
                 Grids: [
@@ -152,7 +153,7 @@ class Mod implements IPostDBLoadMod, IPostSptLoadMod
         }
         else 
         {
-            console.log("MapsCase hasn't loaded.")
+            console.log("ERROR WHILE LOADING MAPS CASE")
         }
     }
 }

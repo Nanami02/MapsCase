@@ -1,7 +1,7 @@
 {
     "manifest": [
         {
-            "key": "assets/content/items/barter/wallet/wallet.bundle",
+            "key": "assets/content/items/barter/wallet/item_wallet.bundle",
             "dependencyKeys": []
         }
     ]
